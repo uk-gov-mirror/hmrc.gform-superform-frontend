@@ -7,3 +7,31 @@
 @import 'partials/_utilities';
 
 @import 'partials/_shame';
+
+@import 'partials/task-list';
+
+.govuk-tag {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  display: inline-block;
+  padding: 4px 8px;
+  padding-bottom: 1px;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  color: #ffffff;
+  background-color: #005ea5;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.to-do {
+  background-color: #ffbf47;
+  color: black;
+}
+

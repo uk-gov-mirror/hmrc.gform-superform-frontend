@@ -14,10 +14,20 @@
  * limitations under the License.
  */
 
-package viewmodels
+package controllers
 
-case class RepeaterAnswerSection (headingKey: String,
-                                  relevanceRow: AnswerRow,
-                                  rows: Seq[RepeaterAnswerRow],
-                                  addLinkKey: String,
-                                  addLinkUrl: String) extends Section
+import javax.inject.Inject
+
+import play.api.i18n.{I18nSupport, MessagesApi}
+import play.api.mvc.{Action, AnyContent}
+import uk.gov.hmrc.play.bootstrap.controller.FrontendController
+import config.FrontendAppConfig
+import views.html.superform
+
+class SuperFormController @Inject()(val appConfig: FrontendAppConfig,
+                                val messagesApi: MessagesApi) extends FrontendController with I18nSupport {
+
+  def loadForm(id: String): Action[AnyContent] = Action { implicit request =>
+    Ok(superform(id, appConfig))
+  }
+}

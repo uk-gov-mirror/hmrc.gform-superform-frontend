@@ -1,6 +1,7 @@
 # microservice specific routes
 
 GET        /                                            controllers.IndexController.onPageLoad
+GET        /:id                                         controllers.SuperFormController.loadForm(id: String)
 
 GET        /assets/*file                                controllers.Assets.versioned(path="/public", file: Asset)
 
